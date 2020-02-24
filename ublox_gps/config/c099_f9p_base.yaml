@@ -19,7 +19,7 @@ rate: 4                     # Measurement rate in Hz
 nav_rate: 4                 # in number of measurement cycles
 
 uart1:
-  baudrate: 9600            # C099-F9P specific
+  baudrate: 460800            # C099-F9P specific
   in: 0                     # No UART in for base
   out: 32                   # RTCM 3
 
