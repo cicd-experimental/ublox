@@ -90,3 +90,9 @@ gen/*
 *.out
 *.app
 
+# Ignore vscode folder
+.vscode/
+
+# Ignore temporal files from .deb generation
+*.ddeb
+
