@@ -119,14 +119,14 @@ void UbloxNode::addProductInterface(std::string product_category,
     components_.push_back(ComponentPtr(new AdrUdrProduct));
   else if (product_category.compare("FTS") == 0)
     components_.push_back(ComponentPtr(new FtsProduct));
-  else if(product_category.compare("SPG") != 0)
   // ARDUSIMPLE HEADING. They not use this parameter in binary file
   else if (product_category.compare("HPG") == 0){
     components_.push_back(ComponentPtr(new HpgRovProduct));
     ROS_WARN("Product category %s %s from MonVER message not configured. "
             "Assumed use ardusimple 'AS-STARTKIT-HEAD-L1L2-NH-00' as HPG ROV",
             product_category.c_str(), ref_rov.c_str());
-
+  }
+  else if(product_category.compare("SPG") != 0)
     ROS_WARN("Product category %s %s from MonVER message not recognized %s",
              product_category.c_str(), ref_rov.c_str(),
              "options are HPG REF, HPG ROV, TIM, ADR, UDR, FTS, SPG");
